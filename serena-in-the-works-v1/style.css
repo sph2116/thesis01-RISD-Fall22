@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'Gimme';
+    src: url(assets/GimmeConstructoVariable_02.ttf);
+}
+
+@font-face {
+    font-family: 'Director';
+    src: url(assets/Director-Regular.woff2), url(assets/Director-Regular.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Director';
+    src: url(assets/Director-Bold.woff2), url(assets/Director-Bold.woff);
+    font-weight: 700;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+        transform: scale(0.95);
+        transform: translate(0, 24px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes type-animation {
+    0%{
+        font-variation-settings: 'wght' 400;
+    }
+
+    100% {
+        font-variation-settings: 'wght' 700;
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;     
+}
+
+html, body {
+    overflow-x: hidden;
+    /* height: 100%; */
+}
+
+body {
+    font-family: 'Director', serif;
+    font-size: 1em;
+    font-weight: 400;
+    width: 100vw;
+    color: #C1663C;
+    /* background-color: #000; */
+    /* color: #000; */
+
+}
+
+
+section {
+    width: 100vw;
+    position: sticky;
+    top: 0;
+}
+
+section.meta-info {
+    /* background-color: transparent; */
+    /* background-color: white; */
+
+   color: #D7C27B;
+    position: fixed;
+    z-index: 100;
+}
+
+section.meta-info p {
+
+    width: fit-content;
+    transform-origin: center;
+    /* background-color: red; */
+    position: fixed;
+    top: 50%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0;
+    /* text-transform: uppercase; */
+    font-size: 1rem;
+    letter-spacing: 1.4;
+}
+
+p.name {
+    left: 0px;
+    transform: rotate(-90deg) translateY(-50%);
+}
+
+p.pecha-kucha {
+    transform: rotate(90deg) translateY(-500%);
+    right: -2px;
+}
+
+section.content {
+    height: 100vh;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+    padding: 36px;
+
+    background-color: #fff;
+    /* transition: opacity 1s; */
+    opacity: 0;
+}
+
+section.content h1 {
+    text-transform: uppercase;
+    /* background-color: #8FFFBF; */
+    font-size: 3rem;
+    text-align: center;
+
+}
+
+section.content h2 {
+    position: absolute;
+    width: fit-content;
+    z-index: 5;
+    /* background-color: #FFA8FF; */
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+section.content:nth-child(even) {
+    background-color: #F8F3F0;
+}
+
+
+section.content img {
+    display: block;
+    max-width: 60%;
+    max-height: 70vh;
+    opacity: 0;
+}
+
+
+section.content blockquote {
+    margin-left: 0;
+    width: 40vw;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+section.content blockquote + p{
+    margin-top: 1rem;
+}
+
+section.content .image-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+}
+
+.image-wrapper div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aliceblue; */
+}
+
+.image-wrapper div p {
+    /* color: red; */
+    background-color: #8FFFBF;
+}
+
+.image-wrapper div img, .image-wrapper div video {
+    max-height: 100%;
+    max-width: 98%;
+    
+}
+
+
+video {
+    max-height: 70vh;
+    max-width: 60%;
+}
+
+
+section.content.in-view {
+    opacity: 1;
+    transition: opacity .5s;
+    transition-delay: .2s;
+    transition-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+section.in-view img, section.in-view video {
+    animation: show 0.4s 0.4s both cubic-bezier(0.45, 0, 0.55, 1);
+
+}
+
+h3 {
+    font-family: 'Gimme';
+    font-size: 18rem;
+    /* background-color: blanchedalmond; */
+
+    transform: translateY(-3rem); 
+    animation: type-animation 2s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+div.progress-container {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    /* background-color: blue; */
+    height: 10px;
+    z-index: 6;
+}
+
+div.progress-bar {
+    position: relative;
+    width: 5%;
+    height: 100%;
+    background-color: antiquewhite;
+    background-image: linear-gradient(90deg, #FFA8FF, #C7F9FF, #8FFFBF);
+}
+
+/* Scroll snap */
+
+/* section.content {
+        scroll-snap-align: start;
+} 
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+} 
+
+main {
+    height: 100vh;
+    width: 100vw;
+
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    background-color: blue;
+    scroll-snap-type: y proximity; 
+} */
