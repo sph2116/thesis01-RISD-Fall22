@@ -12,9 +12,9 @@ const observer = new IntersectionObserver(entries => {
             entry.target.classList.add("in-view");
         }
         
-        // else {
-        //     entry.target.classList.remove("in-view")
-        // }
+        else {
+            entry.target.classList.remove("in-view")
+        }
     })
 }, {
     threshold: [0, 0.4, 1.0] //specifies at what point in the scroll the observer should execute the code itself
