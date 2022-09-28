@@ -159,7 +159,7 @@ section.content:nth-child(even) {
 }
 
 
-section.content img {
+section.content img, section.content video {
     display: block;
     max-width: 90%;
     max-height: 70vh;
@@ -278,3 +278,36 @@ main {
     background-color: blue;
     scroll-snap-type: y proximity; 
 } */
+
+@media screen and (min-width: 1500px) {
+    section.meta-info p {
+        font-size: 1.5rem;
+        letter-spacing: 1.4;
+        /* background-color: red; */
+    }
+
+    h1 pre {
+        font-size: 5rem;
+    }
+
+    h3 {
+        font-size: 24rem;
+    }
+
+    section.content blockquote {
+        margin-left: 0;
+        max-width: 40vw;
+        font-size: 2;
+        line-height: 1.75;
+    }
+    
+    section.content blockquote + p{
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    section.content img, section.content video {
+        max-width: 90%;
+        max-height: 78vh;
+    }
+}
