@@ -58,13 +58,14 @@ body {
     color: #C1663C;
     /* background-color: #000; */
     /* color: #000; */
-
 }
 
 
 section {
     width: 100vw;
+
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
 }
 
@@ -104,7 +105,6 @@ p.pecha-kucha {
 
 section.content {
     height: 100vh;
-
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -114,6 +114,24 @@ section.content {
     background-color: #fff;
     /* transition: opacity 1s; */
     opacity: 0;
+}
+
+section.content.title-card {
+    justify-content: center;
+    /* background-color: #C1663C; */
+}
+
+
+section.content.title-card p {
+  font-size: 22px;
+  margin-top: 48px;
+}
+
+h1 pre {
+    font-family: 'Director', serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    /* background-color: #8FFFBF; */
 }
 
 section.content h1 {
@@ -143,7 +161,7 @@ section.content:nth-child(even) {
 
 section.content img {
     display: block;
-    max-width: 60%;
+    max-width: 90%;
     max-height: 70vh;
     opacity: 0;
 }
@@ -151,13 +169,13 @@ section.content img {
 
 section.content blockquote {
     margin-left: 0;
-    width: 40vw;
-    font-size: 1.5rem;
-    line-height: 1.4;
+    max-width: 40vw;
+    font-size: 1.7rem;
+    line-height: 1.5;
 }
 
 section.content blockquote + p{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 section.content .image-wrapper {
@@ -194,7 +212,7 @@ section.content .image-wrapper {
 
 video {
     max-height: 70vh;
-    max-width: 60%;
+    max-width: 90%;
 }
 
 
@@ -217,6 +235,10 @@ h3 {
 
     transform: translateY(-3rem); 
     animation: type-animation 2s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+#design-space-3d {
+    max-height: 90vh;
 }
 
 div.progress-container {
